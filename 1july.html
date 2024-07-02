@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Yusuf Baha Şahin</title>
+  <link rel="icon" type="image/x-icon" href="favicon(1).ico">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+
+<style>
+#myHeader {
+  background-color: lightgreen;
+  color: black;
+  padding: 20px;
+  text-align: left;
+} 
+
+.drivers {
+  background-color: rgb(255, 0, 0);
+  color: white;
+  border: 2px solid black;
+  margin: 20px;
+  padding: 20px;
+}
+</style>
+
+
+</head>
+<body>
+
+
+<h1 style="background-color:LightBlue; text-align:center;">Progress</h1>
+<p>Here are the new things I have learned on 1 July<br>
+Such as a link buttons that jumps to the other parts of the page. Because page is long.<br>
+And usage examples for class, iframe, id and javascript.<br>
+Also I made it responsive by having a setup viewport so that the website can fit all devices.<br>
+Meaning it will be look good on both mobile and pc screens. 
+</p>
+
+<p><a href="#1">Jump to iframe example</a></p>
+<p><a href="#2">Jump to class usage</a></p>
+
+<h2 id="myHeader">Example of id usage with headers</h2>
+<h2 id="myHeader">A JavaScript that changes the value of the src attribute of an image.</h2>
+
+<script>
+function light(sw) {
+  var pic;
+  if (sw == 0) {
+    pic = "PNG görüntüsü(1).PNG"
+  } else {
+    pic = "PNG görüntüsü.PNG"
+  }
+  document.getElementById('myImage').src = pic;
+}
+</script>
+
+<img style="width:25%;" id="myImage" src="PNG görüntüsü(1).PNG">
+
+<p>
+<button type="button" onclick="light(1)">Light On</button>
+<button type="button" onclick="light(0)">Light Off</button>
+</p>
+
+<h2 id="1" id="myHeader">Example of Iframe</h2>
+
+<iframe src="file:///home/voiscope-server/Desktop/html_practice/28June.html" height="500" width="1000" title="Iframe Example"></iframe>
+
+<h2 id="2" id="myHeader">Example usage of class and hiding them with js button</h2>
+
+<button onclick="myFunction()">Hide class elements</button>
+
+<h3 class="drivers">Leclerc</h3>
+<p>Leclerc is driving for Ferrari.</p>
+
+<h3 class="drivers">Norris</h3>
+<p>Norris is driving for McLaren.</p>
+
+<h3 class="drivers">Verstappen</h3>
+<p>Verstappen is driving for RedBull.</p>
+
+<script>
+function myFunction() {
+  var x = document.getElementsByClassName("drivers");
+  for (var i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+}
+</script>
+</body>
+</html> 
